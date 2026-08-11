@@ -15,7 +15,7 @@
     <h2>Add a Game</h2>
     <form>
     <label for="title">Title:</label>
-    <input for="text" id="title">
+    <input type="text" id="title">
     <label for="genre">Genre:</label>
     <select name="genre" id="genre">
     <option>Action</option>
@@ -38,9 +38,10 @@
     <option>Dropped</option>
     </select>
     <label for="rating">Rating:</label>
-    <input for="number" id="rating">
+    <input type="number" id="rating" min="1" max = "10">
     <button type="submit">Add Game</button>
     </form>
     </main>
+<script src="script.js"></script>
 </body>
 </html>
