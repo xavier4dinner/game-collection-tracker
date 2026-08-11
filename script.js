@@ -10,6 +10,8 @@ const ratingInput = document.querySelector("#rating");
 
 console.log(form);
 
+const games = [];
+
 form.addEventListener("submit", function(event){
 event.preventDefault();
 
@@ -26,6 +28,7 @@ event.preventDefault();
     status: statusInput.value,
     rating: ratingInput.value
 };
+games.push(game);
 console.log(game);
 });
 
