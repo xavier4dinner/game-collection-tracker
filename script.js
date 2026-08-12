@@ -1,14 +1,16 @@
 console.log("Game collection tracker loaded!");
 
-
+const gameList = document.querySelector("#game-list");
 const form = document.querySelector("form");
+
 const titleInput = document.querySelector("#title");
 const genreInput = document.querySelector("#genre");
 const platformInput = document.querySelector("#platform");
 const statusInput = document.querySelector("#status");
 const ratingInput = document.querySelector("#rating");
+const card = document.createElement("div");
 
-console.log(form);
+/*console.log(form); Show that forms is working in console*/
 
 const games = [];
 
@@ -28,7 +30,11 @@ event.preventDefault();
     status: statusInput.value,
     rating: ratingInput.value
 };
-games.push(game);
-console.log(game);
+    games.push(game);
+    const card = document.createElement("div");
+    card.textContent = game.title;
+     gameList.appendChild(card);
+    console.log(game);
+    console.log(games);
 });
 
